@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Oh Yes!
-// @version     1.1
+// @version     1.2
 // @namespace   https://www.khanacademy.org/profile/KnowMoreStuff/
 // @updateURL   https://openuserjs.org/meta/KnowMoreStuff/Oh_Yes!.meta.js
 // @icon        https://dl.dropboxusercontent.com/u/57161259/icons/cs-ohnoes-icon.png
@@ -9,7 +9,6 @@
 // @description Oh Yes! Oh Noes! The Error Buddy is now much less annoying on Khan Academy.
 // @include     http*://www.khanacademy.org/computer-programming/*
 // @include     http*://www.khanacademy.org/computing/computer-programming/*/*/p/*
-// @version     1.1
 // @grant       GM_log
 // @run-at      document-idle
 // ==/UserScript==
@@ -27,6 +26,8 @@
         var ohnoes = document.getElementsByClassName("error-buddy")[0];
         if (ohnoes) {
             ohnoes.parentNode.removeChild(ohnoes);
+        } else {
+                GM_log("Oh Yes: Ajax not done loading yet....");
         }
 
         // ...but we want to keep the error messages in a less annoying form.
@@ -63,11 +64,13 @@
 
             // Clear the timer now that we can be pretty sure we have succeeded.
             clearTimeout(timer);
+            GM_log("Oh Yes: Success. Timer cleared.");
         }
     }
 
     // I don't know of a better way of dealing with the ajax than to check every second until
     // we find the elements we want.
+    GM_log("Oh Yes: Timer starting.");
     timer = setInterval(ohYes, 1000);
 
 })();
