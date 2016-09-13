@@ -18,7 +18,9 @@
 
     function waitForAjax() {
         var ed;
+        var liveEd;
         try {
+            liveEd = ScratchpadUI.liveEditor;
             ed = ScratchpadUI.liveEditor.editor.editor;
         } catch (e) {
             GM_log("KAET: Ajax not loaded yet.");
@@ -29,8 +31,10 @@
 
         ed.setShowInvisibles(true);
 
-        $("div.scratchpad-canvas-wrap").attr("style","width: 400px; right: 0; left: auto;");
-        ed.resize();
+        if (liveEd.editorType === "ace_webpage") {
+            $("div.scratchpad-canvas-wrap").attr("style","width: 400px; right: 0; left: auto;");
+            ed.resize();
+        }
     }
     var timer = setInterval(waitForAjax, 1000);
     GM_Log("KAET: Started ajax wait timer.");
