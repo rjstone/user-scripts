@@ -1,19 +1,16 @@
 // ==UserScript==
 // @name        Oh Yes!
-// @version     1.2
+// @version     1.2.1
 // @namespace   https://www.khanacademy.org/profile/KnowMoreStuff/
-// @updateURL   https://openuserjs.org/meta/KnowMoreStuff/Oh_Yes!.meta.js
 // @icon        https://dl.dropboxusercontent.com/u/57161259/icons/cs-ohnoes-icon.png
 // @homepageURL http://makeyourownsite.kissr.com/
 // @author      Robert Stone
 // @description Oh Yes! Oh Noes! The Error Buddy is now much less annoying on Khan Academy.
-// @include     http*://www.khanacademy.org/computer-programming/*
-// @include     http*://www.khanacademy.org/computing/computer-programming/*/*/p/*
+// @include     https://www.khanacademy.org/computer-programming/*
+// @include     https://www.khanacademy.org/computing/computer-programming/*/*/p/*
 // @grant       GM_log
 // @run-at      document-idle
 // ==/UserScript==
-
-// Yes, I know I could probably use jQuery, but @require doesn't work properly in all browser environs.
 
 (function() {
     'use strict';
@@ -40,9 +37,9 @@
             //ts.display = "block";
             ts.position = "fixed";
             ts.left = "auto";
-            ts.top = "auto";
-            ts.bottom = "20px";
-            ts.right = "20px";
+            ts.top = "5px";
+            ts.bottom = "auto";
+            ts.right = "5px";
             ts.width = "300px";
             ts.height = "auto";
             ts.marginTop = "0";
