@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        KA Editor Tools
-// @version     0.1.1
+// @version     0.1.3
 // @namespace   https://www.khanacademy.org/profile/KnowMoreStuff/
 // @updateURL   none:
 // @icon        https://dl.dropboxusercontent.com/u/57161259/icons/cs-ohnoes-icon.png
@@ -33,8 +33,8 @@
 
         $(".scratchpad-wrap-outer>div:first-child").attr("style","max-width: 100% !important");
 
-        if (liveEd.editorType === "ace_webpage") {
-            $("div.scratchpad-canvas-wrap").attr("style","width: 400px; right: 0; left: auto;");
+        if (liveEd.editorType === "ace_webpage" || liveEd.editorType === "ace_sql" ) {
+            $("div.scratchpad-canvas-wrap").attr("style","width: 50%; right: 0; left: auto;");
             ed.resize();
         }
     }
