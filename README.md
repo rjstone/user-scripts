@@ -2,6 +2,8 @@
 
 These are my Tampermonkey/GreaseMonkey User Scripts.
 
+They automatically get published to [my account on OpenUserJS](https://openuserjs.org/scripts/KnowMoreStuff/) using a webhook. And autoupdates are supported so installing from there is recommended.
+
 They are rather specific to particular web sites, but you could find them useful.
 
 I recommend using them with Tampermonkey, an extension for eevery major browser. But they will work with Greasemonkey and
