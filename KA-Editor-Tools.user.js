@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name        KA Editor Tools
-// @version     0.1.3
+// @version     0.1.4
 // @namespace   https://www.khanacademy.org/profile/KnowMoreStuff/
-// @updateURL   none:
+// @updateURL   https://openuserjs.org/meta/KnowMoreStuff/KA_Editor_Tools.meta.js
+// @downloadURL https://openuserjs.org/src/scripts/KnowMoreStuff/KA_Editor_Tools.user.js
 // @icon        https://dl.dropboxusercontent.com/u/57161259/icons/cs-ohnoes-icon.png
-// @homepageURL http://makeyourownsite.kissr.com/
+// @homepageURL http://codeyourown.site/
 // @author      Robert Stone
 // @description Modifications/fixes for the Ace Editor embedded in Khan Academys programming projects.
 // @include     http*://www.khanacademy.org/computer-programming/*
-// @include     https://www.khanacademy.org/computing/computer-programming/*/*/p/*
+// @include     http*://www.khanacademy.org/computing/computer-programming/*/*/p/*
 // @grant       GM_log
 // @run-at      document-idle
 // ==/UserScript==
@@ -37,7 +38,15 @@
             $("div.scratchpad-canvas-wrap").attr("style","width: 50%; right: 0; left: auto;");
             ed.resize();
         }
+
+        $("div[class^=\"bubble_\"]")
+            .attr("style","top: auto !important; max-width: none !important;" +
+                  " padding: 5px !important;" +
+                  " position: fixed !important;" +
+                  " right: 0px !important; left: 0px; width: 440px;" +
+                  " bottom: 10px; height: 28px;");
     }
+
     var timer = setInterval(waitForAjax, 1000);
     GM_Log("KAET: Started ajax wait timer.");
 
