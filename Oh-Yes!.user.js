@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name        Oh Yes!
-// @version     1.2.1
+// @version     1.2.2
 // @namespace   https://www.khanacademy.org/profile/KnowMoreStuff/
+// @updateURL   https://openuserjs.org/meta/KnowMoreStuff/Oh_Yes!.meta.js
 // @icon        https://dl.dropboxusercontent.com/u/57161259/icons/cs-ohnoes-icon.png
-// @homepageURL http://makeyourownsite.kissr.com/
+// @homepageURL http://codeyourown.site/
 // @author      Robert Stone
 // @description Oh Yes! Oh Noes! The Error Buddy is now much less annoying on Khan Academy.
-// @include     https://www.khanacademy.org/computer-programming/*
-// @include     https://www.khanacademy.org/computing/computer-programming/*/*/p/*
+// @include     http*://www.khanacademy.org/computer-programming/*
+// @include     http*://www.khanacademy.org/computing/computer-programming/*/*/p/*
 // @grant       GM_log
 // @run-at      document-idle
 // ==/UserScript==
