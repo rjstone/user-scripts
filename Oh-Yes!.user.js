@@ -3,6 +3,7 @@
 // @version     1.2.2
 // @namespace   https://www.khanacademy.org/profile/KnowMoreStuff/
 // @updateURL   https://openuserjs.org/meta/KnowMoreStuff/Oh_Yes!.meta.js
+// @downloadURL https://openuserjs.org/src/scripts/KnowMoreStuff/Oh_Yes!.user.js
 // @icon        https://dl.dropboxusercontent.com/u/57161259/icons/cs-ohnoes-icon.png
 // @homepageURL http://codeyourown.site/
 // @author      Robert Stone
